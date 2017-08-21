@@ -4,7 +4,7 @@
 
 Nós te ensinamos com alguns clicks
 
-<a href="#"><img width="728" src="https://raw.githubusercontent.com/kenjishiromajp/pressthebutton_v2/assets/imgs/capa.jpg" alt="Press the Button" /></a>
+<a href="#"><img width="728" src="https://raw.githubusercontent.com/kenjishiromajp/pressthebutton_v2/master/assets/imgs/capa.jpg" alt="Press the Button" /></a>
 
 ### OBJETIVO
 
