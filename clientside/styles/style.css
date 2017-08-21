@@ -1,0 +1,96 @@
+/**
+ * Main stylesheet of the project.
+ */
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+}
+
+@keyframes fadeInDown {
+ from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#main-content {
+  padding-top: 20px;
+  top: -22%;
+  transform: translateY(22%);
+}
+
+.text > h1 {
+	font-size: 48px;
+	font-weight: 300;
+	text-align: center;
+	line-height: 1.23em;
+	color: #3d3f43;
+	padding-bottom: 18px;
+	animation-name: fadeInDown;
+	animation-duration: 1s;
+}
+
+.button-area{
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.cta{
+	padding-bottom: 70px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 300;
+	letter-spacing: 0.03em;
+	color: #6d7278;
+	animation-name: fadeInDown;
+	animation-duration: 1s;
+}
+
+.central{
+	height: 200px;
+	width: 200px;
+
+	border-radius: 555px;
+	border-style: none;
+	outline: none;
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  background-color: #00cc99;
+  box-shadow: 0 12px #009973;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
+  cursor: pointer;
+
+}
+
+.central:active {
+	background-color: #00cc99;
+	box-shadow: 0 7px #009973;
+	transform: translateY(4px);
+}
+
+/**
+* FOOTER
+*/
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-weight: 300;
+  color: #c9cbcf;
+  animation-name: fadeInDown;
+  animation-duration: 1.5s;
+}
