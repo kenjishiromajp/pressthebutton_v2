@@ -1,0 +1,64 @@
+@import "../../style/_variables.scss";
+
+.button{
+    background: none;
+    border: none;
+	display: block;
+    width: 30vw;
+    height: 30vw;
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+    cursor: pointer;
+    outline:none;
+    &:before,
+    &:after{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      max-width: inherit;
+      max-height: inherit;
+      box-sizing: border-box;
+      content: '';
+      border: solid 4px rgba(0,0,0,.4);
+      background: $primaryColor;
+      border-radius: 50%;
+      width: inherit;
+      height: inherit;
+      will-change: background, transform;
+    }
+    &:after{
+      transition: transform 0.4s ease;
+      transform: translateY(-25px);
+    }
+    &:before{
+      background: darken($primaryColor,5%);
+    }
+    > span{
+      width: inherit;
+      background: darken($primaryColor,5%);
+      height: 25px;
+      display: block;
+      border-left: solid 4px rgba(0,0,0,.4);
+      border-right: solid 4px rgba(0,0,0,.4);
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform-origin: center bottom;
+      transform: scaleY(1);
+      transition: transform 0.4s ease;
+      max-width: inherit;
+      max-height: inherit;
+    }
+
+  &:active{
+    &:after{
+      transform: translateY(0px);
+    }
+    > span{
+      transform: scaleY(0);
+    }
+
+  }
+
+}

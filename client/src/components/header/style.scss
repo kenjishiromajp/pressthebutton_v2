@@ -1,10 +1,22 @@
+h1.logo{
+	background: url("../../assets/logo.svg") no-repeat center;
+	display: block;
+	width: 115px;
+	height: 76px;
+    color: white;
+    a{
+      display: block;
+      text-indent: -9999px;
+    }
+}
+
 .header {
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 56px;
-	padding: 0;
+	padding: 20px;
 	background: transparent;
 	z-index: 50;
 	h1 {
