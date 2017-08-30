@@ -1,6 +1,6 @@
 /* eslint-disable react/sort-comp */
 import { h, Component } from 'preact';
-import style from './style';
+import './style.scss';
 
 export default class AboutRoute extends Component {
 	state = {

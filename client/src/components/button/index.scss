@@ -11,6 +11,8 @@
     position: relative;
     cursor: pointer;
     outline:none;
+    margin: 140px 0 10px;
+    z-index: 10;
     &:before,
     &:after{
       position: absolute;
@@ -58,7 +60,18 @@
     > span{
       transform: scaleY(0);
     }
+  }
 
+
+  &.-sadness{
+    &:before,
+    &:after{
+      background: $sadness;
+    }
+    > span,
+    &:before{
+      background: darken($sadness,10%);
+    }
   }
 
 }

@@ -1,11 +1,22 @@
 import { h, Component } from 'preact';
-import style from './style.scss';
+import './index.scss';
 
 export default class ButtonPress extends Component {
+	constructor(props){
+		super(props);
+		this.interval = null;
+	}
+	onClick(){
+		clearInterval(this.interval);
+		this.interval = setTimeout(_ => {
+			this.props.onClick();
+		},200);
+	}
 	render() {
+		const className = `button ${this.props.class}`;
 		return (
-			<button class={style.button}>
-				<span></span>
+			<button onClick={this.onClick.bind(this)} className={className}>
+				<span />
 			</button>
 		);
 	}

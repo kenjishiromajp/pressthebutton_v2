@@ -1,7 +1,6 @@
 import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
-import Header from './header';
 import AboutRoute from '../routes/about';
 import HomeRoute from '../routes/home';
 import ApathyRoute from '../routes/apathy';
@@ -13,6 +12,7 @@ import LethargyRoute from '../routes/lethargy';
 import MemoryRoute from '../routes/memory';
 import SadnessRoute from '../routes/sadness';
 import WeightRoute from '../routes/weight';
+import DefaultLayout from '../layouts/DefaultLayout/index';
 
 
 // import Home from 'async!./home';
@@ -30,22 +30,21 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div id="app">
-				<Header />
-				<Router onChange={this.handleRoute}>
-					<HomeRoute path="/" />
-					<AboutRoute path="/about/" />
-					<ApathyRoute  path="/apathy" />
-					<ConcentrationRoute  path="/concentration" />
-					<DeathRoute  path="/death" />
-					<HowtoRoute  path="/howto" />
-					<IrritabilityRoute  path="/irritability" />
-					<LethargyRoute  path="/lethargy" />
-					<MemoryRoute  path="/memory" />
-					<SadnessRoute  path="/sadness" />
-					<WeightRoute  path="/weight" />
-				</Router>
-			</div>
+			<BrowserRouter onChange={this.handleRoute}>
+				<Switch>
+					<DefaultLayout path="/" exact component={HomeRoute} />
+					<DefaultLayout path="/about" exact component={AboutRoute} />
+					<DefaultLayout path="/apathy" component={ApathyRoute} />
+					<DefaultLayout path="/concentration" component={ConcentrationRoute} />
+					<DefaultLayout path="/death" component={DeathRoute} />
+					<DefaultLayout path="/howto" component={HowtoRoute} />
+					<DefaultLayout path="/irritability" component={IrritabilityRoute} />
+					<DefaultLayout path="/lethargy" component={LethargyRoute} />
+					<DefaultLayout path="/memory" component={MemoryRoute} />
+					<DefaultLayout path="/sadness" component={SadnessRoute} />
+					<DefaultLayout path="/weight" component={WeightRoute} />
+				</Switch>
+			</BrowserRouter>
 		);
 	}
 }

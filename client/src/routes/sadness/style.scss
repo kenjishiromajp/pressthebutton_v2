@@ -1,0 +1,39 @@
+.profile {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+.ripple{
+	position: fixed;
+	z-index: 0;
+	width: 100vw;
+	height: 100vw;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	&::after{
+		content: "";
+		display: block;
+		height: 200vh;
+		width: 200vh;
+		background: #03c6f4;
+		border-radius: 50%;
+		z-index: -10;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		animation: growRipple 1s ease;
+	}
+	&.-sadness::after{
+
+	}
+}
+
+
+@keyframes growRipple{
+	0%{
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
